@@ -1,11 +1,15 @@
 from flask import Flask
+import random
+
+
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def index():
-	return "hello-mug"
+	weapon = ['m4al', 'ak-47', 'ak-74', 'adar2-15', 'hk 416a5']
+	return(random.choice(weapon))
 
 
 if __name__ =='__main__':
